@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================================================
+   GLOBAL BASE STYLES
+   =================================================== */
+
+@layer base {
+  /* Smooth scroll for the entire page — critical for UX and CWV */
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Improve text rendering globally */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #111827; /* gray-900 */
+    background-color: #ffffff;
+  }
+
+  /* ---- Focus ring — accessibility ---- */
+  *:focus-visible {
+    outline: 2px solid #f97316; /* orange-500 */
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* ---- Text selection color ---- */
+  ::selection {
+    background-color: #fed7aa; /* orange-200 */
+    color: #7c2d12;            /* orange-950 */
+  }
+
+  /* ---- Reduced motion preference ---- */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* ---- Images default to block to eliminate gap ---- */
+  img,
+  video {
+    max-width: 100%;
+    display: block;
+  }
+}
