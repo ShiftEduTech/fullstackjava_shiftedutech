@@ -42,16 +42,26 @@ export default function Hero() {
             {/* Headline — single H1 per page for SEO */}
             <div className="space-y-6">
               <h1 className="text-5xl sm:text-6xl lg:text-[4rem] font-black text-gray-900 leading-[1.1] tracking-tight">
-                JOB Oriented <br className="hidden sm:block" />
+                Full Stack Java Course <br className="hidden sm:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400">
-                  Full Stack Java
+                  with Placement
                 </span>
-                <br /> Internship
+                <br /> in Hyderabad
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
                 Master industry-ready skills with expert guidance. Get placed in top IT companies
                 through our intensive 4-month professional program.
               </p>
+              {/* Trendy Demo Offer Badge */}
+              <div className="flex items-center gap-4 p-1 pr-4 w-fit bg-orange-50/50 backdrop-blur-sm border border-orange-100 rounded-2xl group cursor-default hover:bg-orange-100/50 transition-colors duration-300 mx-auto lg:mx-0">
+                <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-gradient-to-br from-orange-600 to-orange-400 text-white shadow-lg shadow-orange-500/20">
+                  <Sparkles className="h-5 w-5 animate-pulse" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xs font-bold uppercase tracking-wider text-orange-600/80">Special Offer</span>
+                  <span className="text-sm font-black text-gray-900">Attend 3 Free Demo Classes</span>
+                </div>
+              </div>
             </div>
 
             {/* CTA Buttons */}

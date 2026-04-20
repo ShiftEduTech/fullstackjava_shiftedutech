@@ -43,10 +43,13 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
 
           {/* ── Logo ── */}
-          <button
-            type="button"
+          <a
+            href="#home"
             className="flex items-center cursor-pointer group py-2 bg-transparent border-0"
-            onClick={() => scrollToSection('home')}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('home');
+            }}
             aria-label="ShiftEduTech – Return to homepage"
           >
             <img
@@ -56,18 +59,22 @@ export default function Header() {
               width={160}
               height={48}
             />
-          </button>
+          </a>
 
           {/* ── Desktop Nav Links ── */}
           <div className="hidden md:flex items-center space-x-1">
             {NAV_ITEMS.map(({ label, sectionId }) => (
-              <button
+              <a
                 key={sectionId}
-                onClick={() => scrollToSection(sectionId)}
+                href={`#${sectionId}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(sectionId);
+                }}
                 className="text-gray-700 hover:text-orange-600 transition font-medium px-4 py-2 rounded-lg hover:bg-orange-50"
               >
                 {label}
-              </button>
+              </a>
             ))}
           </div>
 
@@ -106,14 +113,18 @@ export default function Header() {
           >
             <div className="flex flex-col space-y-2">
               {NAV_ITEMS.map(({ label, sectionId }) => (
-                <button
+                <a
                   key={sectionId}
-                  onClick={() => scrollToSection(sectionId)}
+                  href={`#${sectionId}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(sectionId);
+                  }}
                   className="text-gray-700 hover:text-orange-600 transition text-left font-medium px-4 py-3 rounded-lg hover:bg-orange-50"
                   role="menuitem"
                 >
                   {label}
-                </button>
+                </a>
               ))}
               <button
                 onClick={() => scrollToSection('contact')}
