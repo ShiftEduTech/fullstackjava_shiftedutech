@@ -1,12 +1,14 @@
+import { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import Courses from './components/Courses';
-import Projects from './components/Projects';
-import Testimonials from './components/Testimonials';
-import Placement from './components/Placement';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+
+const Courses = lazy(() => import('./components/Courses'));
+const Projects = lazy(() => import('./components/Projects'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const Placement = lazy(() => import('./components/Placement'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
 
 /**
  * Root application component.
@@ -26,13 +28,17 @@ export default function App() {
       <main id="main-content">
         <Hero />
         <About />
-        <Courses />
-        <Projects />
-        <Testimonials />
-        <Placement />
-        <Contact />
+        <Suspense fallback={<div className="p-8 text-center text-gray-500">Loading sections...</div>}>
+          <Courses />
+          <Projects />
+          <Testimonials />
+          <Placement />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={<div className="p-8 text-center text-gray-500">Loading footer...</div>}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

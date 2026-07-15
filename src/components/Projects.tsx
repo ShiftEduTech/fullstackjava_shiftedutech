@@ -101,7 +101,7 @@ export default function Projects() {
           <h2 id="projects-heading" className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
             Your Commitment:<br />
             <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-              Build 4 real-world projects with us.
+              Build 4+ Real-World Projects with us.
             </span>
           </h2>
           <p className="text-xl text-gray-600 font-medium leading-relaxed">

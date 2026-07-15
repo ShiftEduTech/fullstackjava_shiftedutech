@@ -12,7 +12,7 @@ const STATS = [
   },
   {
     icon: Users,
-    value: '1650+',
+    value: '2500+',
     label: 'Students Trained',
     iconBg: 'bg-blue-300/20',
     iconColor: 'text-blue-200',

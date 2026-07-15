@@ -36,7 +36,7 @@ export default function Hero() {
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-inner">
                 <Sparkles className="h-3 w-3" aria-hidden="true" />
               </span>
-              <span className="text-sm font-bold tracking-wide pr-1">7+ Years | 1650+ Success Stories</span>
+              <span className="text-sm font-bold tracking-wide pr-1">7+ Years | 2500+ Success Stories</span>
             </div>
 
             {/* Headline — single H1 per page for SEO */}

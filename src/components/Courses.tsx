@@ -126,19 +126,19 @@ const COURSE_MODULES: CourseModule[] = [
 ];
 
 const COURSE_BENEFITS: CourseBenefit[] = [
-  { text: 'Live Classes (Online & Offline)', icon: MonitorPlay,           color: 'text-blue-600',    bg: 'bg-blue-100' },
-  { text: '4+ Realtime Projects',            icon: Rocket,                color: 'text-purple-600',  bg: 'bg-purple-100' },
-  { text: 'Daily Tasks & Assignments',       icon: ClipboardList,         color: 'text-yellow-600',  bg: 'bg-yellow-100' },
-  { text: 'Hands-On Practice',               icon: Terminal,              color: 'text-emerald-600', bg: 'bg-emerald-100' },
-  { text: 'Doubts Clarification',            icon: MessageCircleQuestion, color: 'text-pink-600',    bg: 'bg-pink-100' },
-  { text: 'Topic Based Assessments',         icon: Target,                color: 'text-red-600',     bg: 'bg-red-100' },
-  { text: 'Online Exams',                    icon: Laptop,                color: 'text-indigo-600',  bg: 'bg-indigo-100' },
-  { text: 'Resume Building',                 icon: FileText,              color: 'text-cyan-600',    bg: 'bg-cyan-100' },
-  { text: 'Mock Interviews (4)',             icon: Users,                 color: 'text-orange-600',  bg: 'bg-orange-100' },
-  { text: 'Communication Skills',            icon: Mic,                   color: 'text-teal-600',    bg: 'bg-teal-100' },
-  { text: 'Interview Preparation',           icon: BookOpen,              color: 'text-fuchsia-600', bg: 'bg-fuchsia-100' },
-  { text: '100% Placement Assistance',       icon: Briefcase,             color: 'text-green-600',   bg: 'bg-green-100' },
-  { text: 'LinkedIn Profile Optimization',   icon: Linkedin,              color: 'text-sky-600',     bg: 'bg-sky-100' },
+  { text: 'Live Classes (Online & Offline)', icon: MonitorPlay, color: 'text-blue-600', bg: 'bg-blue-100' },
+  { text: '4+ Realtime Projects', icon: Rocket, color: 'text-purple-600', bg: 'bg-purple-100' },
+  { text: 'Daily Tasks & Assignments', icon: ClipboardList, color: 'text-yellow-600', bg: 'bg-yellow-100' },
+  { text: 'Hands-On Practice', icon: Terminal, color: 'text-emerald-600', bg: 'bg-emerald-100' },
+  { text: 'Doubts Clarification', icon: MessageCircleQuestion, color: 'text-pink-600', bg: 'bg-pink-100' },
+  { text: 'Topic Based Assessments', icon: Target, color: 'text-red-600', bg: 'bg-red-100' },
+  { text: 'Online Exams', icon: Laptop, color: 'text-indigo-600', bg: 'bg-indigo-100' },
+  { text: 'Resume Building', icon: FileText, color: 'text-cyan-600', bg: 'bg-cyan-100' },
+  { text: 'Mock Interviews', icon: Users, color: 'text-orange-600', bg: 'bg-orange-100' },
+  { text: 'Communication Skills', icon: Mic, color: 'text-teal-600', bg: 'bg-teal-100' },
+  { text: 'Interview Preparation', icon: BookOpen, color: 'text-fuchsia-600', bg: 'bg-fuchsia-100' },
+  { text: '100% Placement Assistance', icon: Briefcase, color: 'text-green-600', bg: 'bg-green-100' },
+  { text: 'LinkedIn Profile Optimization', icon: Linkedin, color: 'text-sky-600', bg: 'bg-sky-100' },
 ];
 
 // ── Component ──────────────────────────────────────────────────────────────
@@ -164,7 +164,7 @@ export default function Courses() {
             </span>
           </h2>
           <p className="text-xl text-gray-600">
-            Learn by building 4 real-world projects + Get placement support
+            Learn by Building 4+ Real-World Projects + Get Placement Support
           </p>
         </div>
 

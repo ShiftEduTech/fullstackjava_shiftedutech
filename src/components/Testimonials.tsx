@@ -30,7 +30,7 @@ export default function Testimonials() {
             Success Stories
           </div>
           <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-            1650+ Students{' '}
+            2500+ Students{' '}
             <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
               Transformed
             </span>
