@@ -72,9 +72,9 @@ export default function Placement() {
             100% Placement Assistance
           </div>
           <h2 id="placement-heading" className="text-4xl sm:text-5xl font-black text-gray-900 mb-4 tracking-tight leading-[1.05]">
-            Career Support{' '}
+            Java Placement Support{' '}
             <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-              That Gets Results
+              After Your 4-Month Course
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">

@@ -158,13 +158,13 @@ export default function Courses() {
             Complete Curriculum
           </div>
           <h2 id="courses-heading" className="text-5xl font-black text-gray-900 mb-4">
-            Become a Full Stack Java Developer{' '}
+            Full Stack Java Curriculum{' '}
             <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-              in 4 Months (Even if You're a Beginner)
+              Built for Placement
             </span>
           </h2>
           <p className="text-xl text-gray-600">
-            Learn by Building 4+ Real-World Projects + Get Placement Support
+            Become a Full Stack Java developer in 4 months — even as a beginner. Build 4+ real-world projects with placement support.
           </p>
         </div>
 
@@ -241,7 +241,7 @@ export default function Courses() {
         {/* ── Roadmap CTA ── */}
         <div className="flex justify-center mb-16">
           <a
-            href="/ShiftEduTech_FULL STACK JAVA_RoadMap_2026.pdf"
+            href="/ShiftEduTech_Full_Stack_Java_RoadMap_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-orange-500 via-orange-600 to-amber-500 px-8 py-4 font-extrabold text-white shadow-lg shadow-orange-300/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-400/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300"

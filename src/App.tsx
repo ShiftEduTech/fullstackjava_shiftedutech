@@ -7,6 +7,7 @@ const Courses = lazy(() => import('./components/Courses'));
 const Projects = lazy(() => import('./components/Projects'));
 const Testimonials = lazy(() => import('./components/Testimonials'));
 const Placement = lazy(() => import('./components/Placement'));
+const FAQ = lazy(() => import('./components/FAQ'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
@@ -28,15 +29,28 @@ export default function App() {
       <main id="main-content">
         <Hero />
         <About />
-        <Suspense fallback={<div className="p-8 text-center text-gray-500">Loading sections...</div>}>
+        <Suspense
+          fallback={
+            <div className="min-h-[50vh] p-8 text-center text-gray-500" role="status" aria-live="polite">
+              Loading sections...
+            </div>
+          }
+        >
           <Courses />
           <Projects />
           <Testimonials />
           <Placement />
+          <FAQ />
           <Contact />
         </Suspense>
       </main>
-      <Suspense fallback={<div className="p-8 text-center text-gray-500">Loading footer...</div>}>
+      <Suspense
+        fallback={
+          <div className="min-h-24 p-8 text-center text-gray-500" role="status" aria-live="polite">
+            Loading footer...
+          </div>
+        }
+      >
         <Footer />
       </Suspense>
     </div>

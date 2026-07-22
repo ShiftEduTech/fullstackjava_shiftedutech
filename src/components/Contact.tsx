@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+import { useRef } from 'react';
 import { Mail, Phone, MapPin, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { useLoadScriptWhenVisible } from '../utils/useLoadScriptWhenVisible';
 
 // ── Constants ──────────────────────────────────────────────────────────────
 
@@ -79,17 +80,8 @@ const CONTACT_ITEMS = [
 // ── Component ──────────────────────────────────────────────────────────────
 
 export default function Contact() {
-  useEffect(() => {
-    // Load Youform embed script once — guard prevents double-injection on hot reload
-    if (!document.querySelector(`script[src="${YOUFORM_SCRIPT_SRC}"]`)) {
-      const script = document.createElement('script');
-      script.src = YOUFORM_SCRIPT_SRC;
-      script.async = true;
-      document.body.appendChild(script);
-    }
-
-    // No cleanup needed — the script should persist for the lifetime of the page
-  }, []);
+  const formRef = useRef<HTMLDivElement>(null);
+  useLoadScriptWhenVisible(formRef, YOUFORM_SCRIPT_SRC, { async: true });
 
   return (
     <section
@@ -115,9 +107,9 @@ export default function Contact() {
             3 Days Free Demo Classes
           </div>
           <h2 id="contact-heading" className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-            Start Your Journey with a{' '}
+            Book a Free{' '}
             <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-              Free Demo
+              Full Stack Java Demo Class
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed">
@@ -195,8 +187,8 @@ export default function Contact() {
                 </p>
               </div>
 
-              {/* Youform embed — script loaded via useEffect above */}
-              <div className="relative z-10 w-full mb-6">
+              {/* Youform embed — script loads when section approaches viewport; min-h reserves CLS space */}
+              <div ref={formRef} className="relative z-10 w-full mb-6 min-h-[700px]">
                 <div
                   data-youform-embed
                   data-form="0k4b6301"

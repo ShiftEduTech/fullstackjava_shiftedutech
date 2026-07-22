@@ -1,20 +1,16 @@
-import { useEffect } from 'react';
+import { useRef } from 'react';
+import { useLoadScriptWhenVisible } from '../utils/useLoadScriptWhenVisible';
 
 // Elfsight widget app ID — change this if the widget ever regenerates
 const ELFSIGHT_APP_ID = 'elfsight-app-f570c807-818f-408f-a96c-19426a43e8d1';
 const ELFSIGHT_SCRIPT_SRC = 'https://elfsightcdn.com/platform.js';
 
 export default function Testimonials() {
-  useEffect(() => {
-    // Inject the Elfsight script only once (guard against hot-reload double injection)
-    if (!document.querySelector(`script[src="${ELFSIGHT_SCRIPT_SRC}"]`)) {
-      const script = document.createElement('script');
-      script.src = ELFSIGHT_SCRIPT_SRC;
-      script.async = true;
-      script.defer = true;
-      document.body.appendChild(script);
-    }
-  }, []);
+  const widgetRef = useRef<HTMLDivElement>(null);
+  useLoadScriptWhenVisible(widgetRef, ELFSIGHT_SCRIPT_SRC, {
+    async: true,
+    defer: true,
+  });
 
   return (
     <section
@@ -43,7 +39,11 @@ export default function Testimonials() {
         {/* Elfsight Google Reviews Widget
             Uses dangerouslySetInnerHTML to prevent React from crashing when
             Elfsight mutates the DOM tree after mount. */}
-        <div className="mb-20 min-h-[400px]" aria-label="Google Reviews from ShiftEduTech students">
+        <div
+          ref={widgetRef}
+          className="mb-20 min-h-[400px]"
+          aria-label="Google Reviews from ShiftEduTech students"
+        >
           <div
             dangerouslySetInnerHTML={{
               __html: `<div class="${ELFSIGHT_APP_ID}" data-elfsight-app-lazy="true"></div>`,

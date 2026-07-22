@@ -14,7 +14,8 @@ export default defineConfig({
     }),
   ],
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    // Pre-bundle lucide so cold refresh doesn't fetch hundreds of icon ESM files
+    include: ['lucide-react'],
   },
   build: {
     rollupOptions: {

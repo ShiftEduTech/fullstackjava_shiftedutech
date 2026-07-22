@@ -33,7 +33,7 @@ export default function Footer() {
                 We Build Industry-Ready Developers.&rdquo;
               </span>
             </p>
-            <footer className="mt-4 text-sm text-gray-400 font-medium">-ShiftEduTech</footer>
+            <cite className="mt-4 block text-sm text-gray-400 font-medium not-italic">— ShiftEduTech</cite>
           </blockquote>
           <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto rounded-full mt-8" aria-hidden="true" />
         </div>

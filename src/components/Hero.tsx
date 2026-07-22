@@ -1,5 +1,6 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { scrollToSection } from '../utils/scrollToSection';
+import heroImg from '../assets/hero-students.webp';
 
 export default function Hero() {
   /** Scroll to the contact/demo booking section. */
@@ -42,11 +43,11 @@ export default function Hero() {
             {/* Headline — single H1 per page for SEO */}
             <div className="space-y-6">
               <h1 className="text-5xl sm:text-6xl lg:text-[4rem] font-black text-gray-900 leading-[1.1] tracking-tight">
-                Full Stack Java Course <br className="hidden sm:block" />
+                Full Stack Java Course{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400">
-                  with Placement
-                </span>
-                <br /> in Hyderabad
+                  in Hyderabad
+                </span>{' '}
+                with Placement
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
                 Master industry-ready skills with expert guidance. Get placed in top IT companies
@@ -55,7 +56,7 @@ export default function Hero() {
               {/* Trendy Demo Offer Badge */}
               <div className="flex items-center gap-4 p-1 pr-4 w-fit bg-orange-50/50 backdrop-blur-sm border border-orange-100 rounded-2xl group cursor-default hover:bg-orange-100/50 transition-colors duration-300 mx-auto lg:mx-0">
                 <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-gradient-to-br from-orange-600 to-orange-400 text-white shadow-lg shadow-orange-500/20">
-                  <Sparkles className="h-5 w-5 animate-pulse" />
+                  <Sparkles className="h-5 w-5 animate-pulse" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs font-bold uppercase tracking-wider text-orange-600/80">Special Offer</span>
@@ -102,13 +103,14 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent z-10 pointer-events-none" aria-hidden="true" />
                 {/* LCP hero image — loaded eagerly and prioritised for best Core Web Vitals */}
                 <img
-                  src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src={heroImg}
                   alt="Students attending Full Stack Java training class at ShiftEduTech"
                   className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-[1.03]"
                   loading="eager"
                   fetchPriority="high"
-                  width={800}
-                  height={600}
+                  decoding="async"
+                  width={1200}
+                  height={800}
                 />
               </div>
             </div>

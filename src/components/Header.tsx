@@ -1,6 +1,6 @@
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import logoImg from '../../assets/shiftedutech_logo.png';
+import logoImg from '../assets/shiftedutech-logo.png';
 import { scrollToSection as scrollToSectionUtil } from '../utils/scrollToSection';
 
 // Navigation items — defined once, shared between desktop and mobile menus

@@ -1,9 +1,9 @@
 import { Terminal, Monitor, Layout, ShoppingCart, Code } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import cliImg from '../../assets/Projects/CLIProject.png';
-import guiImg from '../../assets/Projects/GUI Project.png';
-import staticWebImg from '../../assets/Projects/StaticWebProject.png';
-import dynamicWebImg from '../../assets/Projects/Dynamic Web Project.png';
+import cliImg from '../assets/projects/cli-project.webp';
+import guiImg from '../assets/projects/gui-project.webp';
+import staticWebImg from '../assets/projects/static-web-project.webp';
+import dynamicWebImg from '../assets/projects/dynamic-web-project.webp';
 
 // ── Types ──────────────────────────────────────────────────────────────────
 

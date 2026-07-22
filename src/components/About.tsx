@@ -1,5 +1,5 @@
 import { Users, Briefcase, GraduationCap, Linkedin, Instagram } from 'lucide-react';
-import trainerImg from '../../assets/Trainer_rama chandra rao.png';
+import trainerImg from '../assets/trainer-rama-chandra-rao.webp';
 
 // Stat cards data — avoids repetition of card markup
 const STATS = [
@@ -54,7 +54,7 @@ export default function About() {
             Founding Mentor
           </span>
           <h2 id="about-heading" className="text-4xl font-black tracking-tight text-white md:text-5xl">
-            Rama Chandra Rao Polamarasetti
+            Meet Your Full Stack Java Trainer in Hyderabad
           </h2>
         </div>
 
